@@ -12,6 +12,9 @@ const mensajeSinRegistros = document.getElementById("sin-registros");
 // 2. Variable de estado numérica
 let likes = 0;
 
+// Umbral del Reto 2: al superar este valor cambia el tema
+const UMBRAL_DESTACADO = 10;
+
 // 3. Formatear la hora actual en formato HH:MM:SS
 function obtenerHoraActual() {
   const ahora = new Date();
@@ -21,9 +24,12 @@ function obtenerHoraActual() {
   return `${horas}:${minutos}:${segundos}`;
 }
 
-// 4. Actualizar contador y estado del botón de restar
+// 4. Actualizar contador, tema y estado del botón de restar
 function actualizarInterfaz() {
   textoContador.textContent = likes;
+
+  // Reto 2: fondo y texto cambian cuando se superan los 10 likes
+  document.body.classList.toggle("tema-destacado", likes > UMBRAL_DESTACADO);
 
   // Reto 1: no permitir restar cuando el contador está en cero
   botonRestar.disabled = likes === 0;

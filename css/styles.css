@@ -197,3 +197,87 @@ body {
   text-align: center;
   color: #adb5bd;
 }
+
+/* ============================================================
+   Reto 2: tema destacado cuando el contador supera 10 likes
+   ============================================================ */
+body,
+.tarjeta,
+.contador,
+.subtitulo,
+.titulo,
+.registros-titulo,
+.tabla-registros th,
+.tabla-registros td {
+  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+}
+
+body.tema-destacado {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+body.tema-destacado .tarjeta {
+  background-color: #1e293b;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+}
+
+body.tema-destacado .titulo {
+  color: #ffffff;
+}
+
+body.tema-destacado .subtitulo {
+  color: #cbd5e1;
+}
+
+body.tema-destacado .contador {
+  color: #38bdf8;
+}
+
+body.tema-destacado .contador-etiqueta {
+  color: #94a3b8;
+}
+
+body.tema-destacado .registros-titulo {
+  color: #e2e8f0;
+}
+
+body.tema-destacado .tabla-registros th {
+  color: #e2e8f0;
+  background-color: #334155;
+  border-color: #475569;
+}
+
+body.tema-destacado .tabla-registros td {
+  color: #e2e8f0;
+  border-color: #475569;
+}
+
+body.tema-destacado .tabla-registros tbody tr:hover {
+  background-color: #273449;
+}
+
+body.tema-destacado .tabla-registros tbody tr:first-child td {
+  color: #38bdf8;
+}
+
+body.tema-destacado .sin-registros {
+  color: #94a3b8;
+}
+
+body.tema-destacado .btn-restar {
+  background-color: #1e293b;
+  color: #e2e8f0;
+  border-color: #475569;
+}
+
+body.tema-destacado .btn-restar:hover:not(:disabled) {
+  background-color: #334155;
+  border-color: #64748b;
+}
+
+body.tema-destacado .btn-restar:disabled {
+  background-color: #1e293b;
+  color: #64748b;
+  border-color: #334155;
+}
