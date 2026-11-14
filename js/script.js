@@ -5,6 +5,7 @@
 // 1. Obtener los elementos del DOM por su ID
 const textoContador = document.getElementById("contador");
 const botonLike = document.getElementById("btn-like");
+const botonRestar = document.getElementById("btn-restar");
 const cuerpoTabla = document.getElementById("cuerpo-tabla");
 const mensajeSinRegistros = document.getElementById("sin-registros");
 
@@ -20,9 +21,12 @@ function obtenerHoraActual() {
   return `${horas}:${minutos}:${segundos}`;
 }
 
-// 4. Actualizar el contador en la interfaz
+// 4. Actualizar contador y estado del botón de restar
 function actualizarInterfaz() {
   textoContador.textContent = likes;
+
+  // Reto 1: no permitir restar cuando el contador está en cero
+  botonRestar.disabled = likes === 0;
 }
 
 // 5. Registrar un clic en la tabla (siempre arriba)
@@ -48,5 +52,13 @@ botonLike.addEventListener("click", () => {
   actualizarInterfaz();
 });
 
-// 7. Estado inicial (contador en cero)
+// 7. Reto 1: evento click del botón "Restar like"
+botonRestar.addEventListener("click", () => {
+  if (likes === 0) return;
+
+  likes--;
+  actualizarInterfaz();
+});
+
+// 8. Estado inicial (contador en cero y botón de restar deshabilitado)
 actualizarInterfaz();

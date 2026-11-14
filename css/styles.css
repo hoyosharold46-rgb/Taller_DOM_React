@@ -79,7 +79,8 @@ body {
   gap: 12px;
 }
 
-.btn-like {
+.btn-like,
+.btn-restar {
   flex: 1;
   padding: 14px 24px;
   border: none;
@@ -106,7 +107,33 @@ body {
   box-shadow: 0 2px 6px rgba(25, 135, 84, 0.35);
 }
 
-.btn-like:focus-visible {
+.btn-restar {
+  background-color: #ffffff;
+  color: #495057;
+  border: 2px solid #ced4da;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.btn-restar:hover:not(:disabled) {
+  background-color: #f1f3f5;
+  border-color: #adb5bd;
+}
+
+.btn-restar:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.btn-restar:disabled {
+  color: #adb5bd;
+  background-color: #f8f9fa;
+  border-color: #e9ecef;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.btn-like:focus-visible,
+.btn-restar:focus-visible {
   outline: 3px solid #86b7fe;
   outline-offset: 3px;
 }
