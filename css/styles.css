@@ -110,3 +110,63 @@ body {
   outline: 3px solid #86b7fe;
   outline-offset: 3px;
 }
+
+/* ============================================================
+   Tabla de registros
+   ============================================================ */
+.registros {
+  margin-top: 32px;
+}
+
+.registros-titulo {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #343a40;
+}
+
+.tabla-registros {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.tabla-registros th,
+.tabla-registros td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.tabla-registros th {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #495057;
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}
+
+.tabla-registros td:last-child,
+.tabla-registros th:last-child {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabla-registros tbody tr:hover {
+  background-color: #f1f3f5;
+}
+
+/* Fila más reciente resaltada */
+.tabla-registros tbody tr:first-child td {
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+.sin-registros {
+  padding: 14px 0;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #adb5bd;
+}
